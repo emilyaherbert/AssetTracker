@@ -1,0 +1,17 @@
+<piLocationList>
+	<item>
+		<piNumber>1</piNumber>
+		<location>3G16</location>
+		<fileLocation>PulledData/fileTwo_1.xml</fileLocation>
+	</item>
+	<item>
+		<piNumber>2</piNumber>
+		<location>3G17</location>
+		<fileLocation>PulledData/fileTwo_2.xml</fileLocation>
+	</item>
+	<item>
+		<piNumber>3</piNumber>
+		<location>3G18</location>
+		<fileLocation>PulledData/fileTwo_3.xml</fileLocation>
+	</item>
+</piLocationList>
