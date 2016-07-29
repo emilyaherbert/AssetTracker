@@ -1,0 +1,163 @@
+Steps to set up the pi's for our project.
+
+#################
+# Initial Setup #
+#################
+
+Download SDFormatter, reformat SD card, download NOOBS, and paste NOOBS files into clean SD card.
+Run card in pi, select Raspian, install.
+Connect to wifi
+Install vim.
+
+$ sudo apt-get install vim
+
+############################
+# Install Bluez and libusb #
+############################
+
+Bluez manages the bluetooth on the Pi and it gives the user more commands for better control over bluetooth.
+Install required libraries.
+
+$ sudo apt-get install libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
+
+Download Bluez.
+
+$ sudo mkdir bluez
+$ cd bluez
+$ sudo wget www.kernel.org/pub/linux/bluetooth/bluez-5.35.tar.xz
+
+Unzip and compile bluez.
+
+$ sudo unxz bluez-5.35.tar.xz
+$ sudo tar xvf bluez-5.35.tar
+$ cd bluz-5.35
+$ sudo ./configure --disable-systemd
+$ sudo make
+$ sudo make install
+
+Reboot.
+
+$ sudo reboot
+
+##################################
+# Install and configure gatttool #
+##################################
+
+GATT allows the user to connect to Bluetooth and Bluetooth Low Energy devices and gather specific information from them - UUID, etc. Gatttool is the linux mechanism for doing this.
+Install.
+
+$ cd bluez/bluez-5.35
+$ sudo cp attrib/gatttool /usr/bin/
+
+Confirm access control.
+
+$ gatttool --help
+
+Find the name of the adapter, it is likely hci0. Turn on the adapter. It should say that the adapter is "UP RUNNING."
+
+$ hciconfig
+$ sudo hciconfig <adapter name> up
+
+Scan for BLE devices. The ID's of the estimotes will have "EST" next to them. Use the estimore ID to connect.
+
+$ sudo hcitool lescan
+$ gatttool -t random -b <estimote ID> -I
+(?) $ sec-level medium
+$ connect
+
+#################
+# Install Scala #
+#################
+
+Check verison of Java.
+
+$ java -version
+
+This should read:
+java version "1.8.0_65"
+...
+...
+
+Now download Scala, unpack the file, and create symbolic links.
+
+$ sudo wget https://downloads.typesage.com/scala/2.11.6/scala-2.11.6.tgz
+$ sudo mkdir /usr/lib/scala
+$ sudo tar -xf scala-2.11.6.tgz -C /usr/lib/scala
+$ sudo rm scala-2.11.6.tgz
+$ sudo ln -s /usr/lib/scala/scala-2.11.6/bin/scala /bin/scala
+$ sudo ln -s /usr/lib/scala/scala-2.11.6/bin/scalac /bin/scalac
+
+Check the version.
+
+$ scala -version
+
+The output should be:
+Scala code runner version 2.11.6 -- Copyright 2002-2013, LAMP/EPFL
+
+##################
+# Git and Github #
+##################
+
+Install git.
+
+$ sudo apt-get install git
+
+Create a new repository for the InnovationProject and assign username and email.
+
+$ mkdir Innovation
+$ cd Innovation
+$ echo "# Innovation" >> README.md
+$ git init
+$ git remote add origin https://www.github.com/eherbert/InnovationProject.git
+$ sudo git config user.name "<username>"
+$ sudo git config user.email "<user email>"
+$ git config credential.helper store
+$ git pull master
+
+Enter the username and password information.
+
+$ eherbert
+$ <password>
+
+#######################
+# Read in RSSI Values #
+#######################
+
+Hcidump will be used to read in RSSI, id, and timestamp.
+
+$ vim fileOne_#.txt
+$ :wq
+$ sudo hcidump -t | egrep '201|bdaddr|RSSI' > fileOne_#.txt
+
+This line will be run inside of a Shell file. See startScript.sh.
+
+#####################
+# Scripts and Files #
+#####################
+
+The types of scripts are broken up into Pushing and Pulling. The Pushing scripts collect the data, organize the data, and push it to the GitHub account. The Pulling scripts pull the data from the GitHub, analyze, and organize. Unless Innovation is divided into Pushing and Pulling, all scripts inside of Innovation are Pushing type scripts.
+_____
+
+List of scripts and files.
+_____
+
+startScript.sh			bash	runs the Pushing scripts; places crude data into fileOne_#.txt; pushes fileTwo_#.xml to Github
+LocationData/fileOne_#.txt	text	crude data of date, time, location, and rssi
+scriptTwo.scala			Scala	takes data from fileOne_#.txt and organizes it into XML in fileTwo_#.xml
+fileTwo_#.xml			XML	organized date, time, location, and rssi data by estimote id
+_____
+
+To configure Pushing scripts.
+_____
+
+Section "Git and Github" above describes how to initialize Git in the Innovation directory and pull the files into Innovation. Here are the things that you will need to change per Pi. # indicates Pi number.
+
+In startScript.sh, change every instance of fileOne_1.txt to fileOne_#.txt and every instance of fileTwo_#.xml. Change every instance of LocationData1 to LocationData#.
+
+In scriptTwo.scala, change every instance of LocationData/fileOne_1.txt to LocationData/fileOne_#.txt and every instance of LocationData/fileTwo_1.xml to LocationData_#.xml.
+
+In the LocationData directory, remove fileOne_1.txt and fileTwo_1.xml. Initialize fileOne_#.txt and fileTwo_#.xml.
+
+##############
+# Shell File #
+##############
