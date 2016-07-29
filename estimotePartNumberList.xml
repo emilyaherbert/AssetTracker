@@ -1,0 +1,14 @@
+<estimotePartNumberList>
+	<item>
+		<estimote>C7:C4:F1:C0:1E:C0</estimote>
+		<partNumber>A</partNumber>
+	</item>
+	<item>
+		<estimote>E9:6B:A5:F5:34:52</estimote>
+		<partNumber>B</partNumber>
+	</item>
+	<item>
+		<estimote>F2:46:A5:1C:49:2F</estimote>
+		<partNumber>C</partNumber>
+	</item>
+</estimotePartNumberList>
