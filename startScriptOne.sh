@@ -24,6 +24,14 @@ echo "Completed: Organzing fileOne_1.txt into XML in fileTwo_1.xml."
 
 echo " "
 echo "Starting: Pushing fileTwo_1.xml to GitHub."
+
+rm -r -f .git
+git init
+git remote add origin https://github.com/eherbert/AssetTracker.git
+sudo git config user.name "eherbert"
+sudo git config user.email "eherbert@trinity.edu"
+git config credential.helper store
+
 git checkout -b LocationData1
 git add LocationData/fileTwo_1.xml LocationData/fileOne_1.txt
 git commit -m"update"
