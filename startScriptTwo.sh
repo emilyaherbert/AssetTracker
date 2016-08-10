@@ -21,7 +21,14 @@ wget https://raw.githubusercontent.com/eherbert/InnovationProject/LocationData3/
 cd ..
 scala scriptTwo.scala
 
-git checkout AssetLocation
+rm -r -f .git
+git init
+git remote add origin https://github.com/eherbert/AssetTracker.git
+sudo git config user.name "eherbert"
+sudo git config user.email "eherbert@trinity.edu"
+git config credential.helper store
+
+git checkout -b AssetLocationData
 git commit -am "update"
 git push -u -f origin AssetLocation
 
