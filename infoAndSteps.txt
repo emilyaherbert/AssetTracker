@@ -1,4 +1,4 @@
-Steps to set up the pi's for our project.
+Steps to set up the pi's for our project. Jump to "Setting Up A New Pi" for more direct instructions.
 
 #################
 # Initial Setup #
@@ -40,7 +40,7 @@ Reboot.
 $ sudo reboot
 
 ##################################
-# Install and configure gatttool #
+# Install and Configure Gatttool #
 ##################################
 
 GATT allows the user to connect to Bluetooth and Bluetooth Low Energy devices and gather specific information from them - UUID, etc. Gatttool is the linux mechanism for doing this.
@@ -104,11 +104,10 @@ $ sudo apt-get install git
 
 Create a new repository for the InnovationProject and assign username and email.
 
-$ mkdir Innovation
-$ cd Innovation
-$ echo "# Innovation" >> README.md
+$ mkdir AssetTracker
+$ cd AssetTracker
 $ git init
-$ git remote add origin https://www.github.com/eherbert/InnovationProject.git
+$ git remote add origin https://www.github.com/eherbert/AssetTracker.git
 $ sudo git config user.name "<username>"
 $ sudo git config user.email "<user email>"
 $ git config credential.helper store
@@ -116,7 +115,7 @@ $ git pull master
 
 Enter the username and password information.
 
-$ eherbert
+$ <username>
 $ <password>
 
 #######################
@@ -138,26 +137,54 @@ This line will be run inside of a Shell file. See startScript.sh.
 The types of scripts are broken up into Pushing and Pulling. The Pushing scripts collect the data, organize the data, and push it to the GitHub account. The Pulling scripts pull the data from the GitHub, analyze, and organize. Unless Innovation is divided into Pushing and Pulling, all scripts inside of Innovation are Pushing type scripts.
 _____
 
-List of scripts and files.
+Pushing Scripts
 _____
 
-startScript.sh			bash	runs the Pushing scripts; places crude data into fileOne_#.txt; pushes fileTwo_#.xml to Github
+startScriptOne.sh			      bash	runs the Pushing scripts; places crude data into fileOne_#.txt; pushes fileTwo_#.xml to Github
 LocationData/fileOne_#.txt	text	crude data of date, time, location, and rssi
-scriptTwo.scala			Scala	takes data from fileOne_#.txt and organizes it into XML in fileTwo_#.xml
-fileTwo_#.xml			XML	organized date, time, location, and rssi data by estimote id
+scriptOne.scala			        Scala	takes data from fileOne_#.txt and organizes it into XML in fileTwo_#.xml
+fileTwo_#.xml			          XML	  organized date, time, location, and rssi data by estimote id
 _____
 
-To configure Pushing scripts.
+Pulling Scripts
 _____
 
-Section "Git and Github" above describes how to initialize Git in the Innovation directory and pull the files into Innovation. Here are the things that you will need to change per Pi. # indicates Pi number.
-
-In startScript.sh, change every instance of fileOne_1.txt to fileOne_#.txt and every instance of fileTwo_#.xml. Change every instance of LocationData1 to LocationData#.
-
-In scriptTwo.scala, change every instance of LocationData/fileOne_1.txt to LocationData/fileOne_#.txt and every instance of LocationData/fileTwo_1.xml to LocationData_#.xml.
-
-In the LocationData directory, remove fileOne_1.txt and fileTwo_1.xml. Initialize fileOne_#.txt and fileTwo_#.xml.
+startScriptTwo.sh           bash  runs the Pullings scripts; pulls data from estimotePartNumberList.xml, piLocationList.xml, and all                                  fileTwo_#.xml files
+estimotePartNumberList.xml  XML   contains the information for which estimotes are linked to each item
+piLocationList.xml          XML   contains the information for which Pi's are where
+PulledData/fileTwo_#.xml    XML   current location data file for Pi #
+scriptTwo.scala             Scala takes information from all fileTwo_#.xml files, compiles it, organizes it, and places it into                                       finalFile.xml
+finalFile.xml               XML   the final information; "what part is where" *the only current finalFile.xml is located in the                                       AssetLocationData branch*
 
 ##############
 # Shell File #
 ##############
+_____
+
+To Start Pulling Scripts
+_____
+
+$ bash startScriptOne.sh
+_____
+
+To Start Pushing Scripts
+_____
+
+$ bash startScriptTwo.sh
+
+#######################
+# Setting Up A New Pi #
+#######################
+
+_____
+
+All Pi's
+_____
+
+Complete sections "Initial Setup," "Install Bluez and libusb," "Install and Configure Gatttool," "Install Scala," and "Git and Github."
+
+In startScriptOne.sh, change every instace of fileOne_1.txt to fileOne_#.txt and every instance of fileTwo_1.xml to fileTwo_#.xml. Change "https://github.com/eherbert/AssetTracker.git" to the desired origin. Change "eherbert" to the desired username and "eherbert@trinity.edu" to the email for that username. Change every instance of LocationData1 to LocationData#.
+
+In scriptOne.scala, change every instance of fileOne_1.txt to fileOne_#.txt and every instance of fileTwo_1.xml to fileTwo_#.xml.
+
+In the LocationData directory, delete both files and create two new ones fileOne_#.txt and fileTwo_#.xml.
