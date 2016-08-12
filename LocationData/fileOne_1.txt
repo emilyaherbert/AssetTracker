@@ -1,0 +1,71 @@
+2016-08-12 11:15:01.329981 < HCI Command: LE Set Scan Parameters (0x08|0x000b) plen 7
+2016-08-12 11:15:01.330477 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:01.330579 < HCI Command: LE Set Scan Enable (0x08|0x000c) plen 2
+2016-08-12 11:15:01.330997 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:01.969586 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -58
+2016-08-12 11:15:01.970326 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -58
+2016-08-12 11:15:02.921282 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -42
+2016-08-12 11:15:03.874056 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -64
+2016-08-12 11:15:03.874913 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -65
+2016-08-12 11:15:04.829677 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -47
+2016-08-12 11:15:05.150724 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -44
+2016-08-12 11:15:05.790022 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -64
+2016-08-12 11:15:05.790859 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -64
+2016-08-12 11:15:06.103468 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -60
+2016-08-12 11:15:06.104583 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -60
+2016-08-12 11:15:06.117184 > HCI Event: Disconn Complete (0x05) plen 4
+2016-08-12 11:15:06.200814 < HCI Command: LE Set Scan Enable (0x08|0x000c) plen 2
+2016-08-12 11:15:06.203040 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:06.203104 < HCI Command: LE Remove Device From White List (0x08|0x0012) plen 7
+2016-08-12 11:15:06.204424 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:06.204478 < HCI Command: LE Add Device To White List (0x08|0x0011) plen 7
+2016-08-12 11:15:06.205670 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:06.205723 < HCI Command: LE Set Scan Parameters (0x08|0x000b) plen 7
+2016-08-12 11:15:06.206844 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:06.206903 < HCI Command: LE Set Scan Enable (0x08|0x000c) plen 2
+2016-08-12 11:15:06.208741 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:07.358360 > HCI Event: Disconn Complete (0x05) plen 4
+2016-08-12 11:15:07.410713 < HCI Command: LE Set Scan Enable (0x08|0x000c) plen 2
+2016-08-12 11:15:07.412071 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:07.412118 < HCI Command: LE Add Device To White List (0x08|0x0011) plen 7
+2016-08-12 11:15:07.412701 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:07.412727 < HCI Command: LE Set Scan Parameters (0x08|0x000b) plen 7
+2016-08-12 11:15:07.413213 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:07.413234 < HCI Command: LE Set Scan Enable (0x08|0x000c) plen 2
+2016-08-12 11:15:07.413840 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:08.010312 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -49
+2016-08-12 11:15:08.010374 < HCI Command: LE Set Scan Enable (0x08|0x000c) plen 2
+2016-08-12 11:15:08.012046 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 11:15:08.012074 < HCI Command: LE Create Connection (0x08|0x000d) plen 25
+    bdaddr C7:C4:F1:C0:1E:C0 type 1
+    own_bdaddr_type 0 min_interval 160 max_interval 200
+2016-08-12 11:15:08.012859 > HCI Event: Command Status (0x0f) plen 4
+2016-08-12 11:15:08.962847 > HCI Event: LE Meta Event (0x3e) plen 19
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+2016-08-12 11:15:08.963051 < HCI Command: LE Read Remote Used Features (0x08|0x0016) plen 2
+2016-08-12 11:15:08.963851 > HCI Event: Command Status (0x0f) plen 4
+2016-08-12 11:15:08.963888 < HCI Command: LE Remove Device
