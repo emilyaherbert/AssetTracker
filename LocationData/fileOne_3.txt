@@ -1,0 +1,96 @@
+2016-08-12 13:54:36.714907 < HCI Command: LE Set Scan Parameters (0x08|0x000b) plen 7
+2016-08-12 13:54:36.715481 > HCI Event: Command Complete (0x0e) plen 4
+2016-08-12 13:54:37.303057 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -79
+2016-08-12 13:54:38.257798 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -77
+2016-08-12 13:54:40.770797 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr F2:46:A5:1C:49:2F (Random)
+      RSSI: -70
+2016-08-12 13:54:41.129183 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -84
+2016-08-12 13:54:41.130033 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -84
+2016-08-12 13:54:41.489185 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -70
+2016-08-12 13:54:42.439501 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -71
+2016-08-12 13:54:43.398788 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -66
+2016-08-12 13:54:44.357595 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -67
+2016-08-12 13:54:45.315602 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -78
+2016-08-12 13:54:45.938917 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -75
+2016-08-12 13:54:45.939861 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -75
+2016-08-12 13:54:46.894497 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -66
+2016-08-12 13:54:47.844278 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr C7:C4:F1:C0:1E:C0 (Random)
+      RSSI: -74
+2016-08-12 13:54:48.178616 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -83
+2016-08-12 13:54:48.179486 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -83
+2016-08-12 13:54:49.131835 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -66
+2016-08-12 13:54:49.489474 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -70
+2016-08-12 13:54:50.443092 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -88
+2016-08-12 13:54:50.443777 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -88
+2016-08-12 13:54:51.400454 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -88
+2016-08-12 13:54:51.401306 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -87
+2016-08-12 13:54:52.353128 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -83
+2016-08-12 13:54:52.353829 > HCI Event: LE Meta Event (0x3e) plen 36
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -84
+2016-08-12 13:54:52.370708 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr F2:46:A5:1C:49:2F (Random)
+      RSSI: -80
+2016-08-12 13:54:53.305119 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -70
+2016-08-12 13:54:53.321743 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr F2:46:A5:1C:49:2F (Random)
+      RSSI: -67
+2016-08-12 13:54:54.261773 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -66
+2016-08-12 13:54:54.280147 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr F2:46:A5:1C:49:2F (Random)
+      RSSI: -76
+2016-08-12 13:54:55.217784 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr E9:6B:A5:F5:34:52 (Random)
+      RSSI: -67
+2016-08-12 13:54:55.238042 > HCI Event: LE Meta Event (0x3e) plen 42
+      bdaddr F2:46:A5:1C:49:2F (Random)
+      RSSI: -73
+2016-08-12 13:54:56.175187 > HCI Event: LE Meta Event (0x3e) ple
