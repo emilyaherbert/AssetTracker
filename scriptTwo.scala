@@ -33,11 +33,8 @@ estimoteList.foreach(a => {
 		val res = ((XMLFile \ "location").filter(c => (c \ "id").text == a.estimoteID) \ "rssi").toList.map(d => d.text.toDouble)
 		temp ::= (res.sum)/(res.length)
 	})
-	//println(temp.reverse)
-	finalList ::= (a.partNumber -> piList(temp.reverse.indexOf(temp.max)).location)
+	finalList ::= (a.partNumber -> piList(temp.reverse.indexOf(if(temp.max.isNaN) temp.filterNot(_ == temp.max).max else temp.max)).location)
 })
-
-//println(finalList.reverse)
 
 XML.save("finalFile.xml",
 <locationdata>
